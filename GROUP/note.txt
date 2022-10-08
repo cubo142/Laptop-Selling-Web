@@ -1,1 +1,9 @@
-Folder này để thành viên trong nhóm làm riêng biệt
+- Tất cả các thành viên làm việc trong folder này
+- File structure.html trưởng nhóm đã set up sẵn 
+  chỉ cần copy code lại rồi bắt đầu làm
+
+Về github:
+- Tất cả thành viên trước khi làm phải git pull về trước.
+- Sau khi làm xong nhớ update phần mình làm lên.
+- Tuyệt đối không được sửa code trong thư mục của người khác, chỉ
+được xem (tránh xung đột khi pull)

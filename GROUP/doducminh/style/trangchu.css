@@ -1,0 +1,40 @@
+.menu_button {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(214, 211, 221);
+    text-align: center;
+    border-radius: 45px;
+}
+
+.menu_button i {
+    position: relative;
+    top: calc(50% - 13px);
+}
+
+.menu_button:hover {
+    background-color: rgb(168, 180, 191);
+    cursor: pointer;
+}
+
+#sale {
+    color: red;
+}
+
+#sale:hover {
+    color: blue;
+}
+
+.navbar-brand{
+    width: 100px;
+}
+.nav-item{
+    margin-left: 5px;
+}
+
+#search-bar{
+
+}
+#search-bar input{
+    border-radius: 60px;
+    width: 400px;
+}
