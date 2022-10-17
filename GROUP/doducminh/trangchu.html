@@ -50,6 +50,24 @@
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                         </form>
                     </li>
+                    <li class="nav-item active">
+                        <span>
+                            <div class="menu_button" id="user">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <span class="sr-only">(current)</span>
+                        </span>
+                    </li>
+                    <li class="nav-item active">
+                        <span>
+                            <div class="menu_button" id="cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+
+                            <span class="sr-only">(current)</span>
+                        </span>
+                    </li>
                     <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -204,8 +222,41 @@
             <div id="row-3" class="row">
                 <div class="col-4">
                     <h5>Tất cả laptop</h5>
-                    <div class="banner__price">
+                    <div class="banner__sort">
                         <h6>Bộ lọc</h6>
+                        <div class="sort__search">
+                            <input type="text" placeholder="Nhập tên cần tìm" value="" id="search">
+                        </div>
+                        <div class="sort__grp">
+                            <button type="button" class="collapsible">Thương hiệu <span
+                                    class="fa-solid fa-plus"></span></button>
+                            <div class="content">
+                                <div class="sort__card">
+                                    <button type="button" class="sort__item">Apple</button>
+                                    <button type="button" class="sort__item">Lenovo</button>
+                                    <button type="button" class="sort__item">Hp</button>
+                                    <button type="button" class="sort__item">Asus</button>
+                                    <button type="button" class="sort__item">Intel</button>
+                                    <button type="button" class="sort__item">Asus</button>
+                                    <button type="button" class="sort__item">Intel</button>
+                                    <button type="button" class="sort__item">Asus</button>
+                                    <button type="button" class="sort__item">Intel</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sort__grp">
+                            <button type="button" class="collapsible">CPU <span
+                                    class="fa-solid fa-plus"></span></button>
+                            <div class="content">
+                                <div class="sort__card">
+                                    <button type="button" class="sort__item">Apple</button>
+                                    <button type="button" class="sort__item">Lenovo</button>
+                                    <button type="button" class="sort__item">Hp</button>
+                                    <button type="button" class="sort__item">Asus</button>
+                                    <button type="button" class="sort__item">Intel</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-8">
@@ -214,6 +265,54 @@
                     </form> -->
                     <div class="product__sort"></div>
                     <div class="product__list">
+                        <div class="product__item">
+                            <div class="row">
+                                <img src="https://salt.tikicdn.com/cache/280x280/ts/product/4d/ef/e4/14b4abb6894d99b5953ec1a1b3cd4eb8.jpg"
+                                    alt="#">
+                            </div>
+                            <div class="row">
+                                <div class="product__description">
+                                    <p class="product__name">ASUS Zenbook 14Q409ZA</p>
+                                    <p class="product__price">Từ 17.990.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__item">
+                            <div class="row">
+                                <img src="https://salt.tikicdn.com/cache/280x280/ts/product/4d/ef/e4/14b4abb6894d99b5953ec1a1b3cd4eb8.jpg"
+                                    alt="#">
+                            </div>
+                            <div class="row">
+                                <div class="product__description">
+                                    <p class="product__name">ASUS Zenbook 14Q409ZA</p>
+                                    <p class="product__price">Từ 17.990.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__item">
+                            <div class="row">
+                                <img src="https://salt.tikicdn.com/cache/280x280/ts/product/4d/ef/e4/14b4abb6894d99b5953ec1a1b3cd4eb8.jpg"
+                                    alt="#">
+                            </div>
+                            <div class="row">
+                                <div class="product__description">
+                                    <p class="product__name">ASUS Zenbook 14Q409ZA</p>
+                                    <p class="product__price">Từ 17.990.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__item">
+                            <div class="row">
+                                <img src="https://salt.tikicdn.com/cache/280x280/ts/product/4d/ef/e4/14b4abb6894d99b5953ec1a1b3cd4eb8.jpg"
+                                    alt="#">
+                            </div>
+                            <div class="row">
+                                <div class="product__description">
+                                    <p class="product__name">ASUS Zenbook 14Q409ZA</p>
+                                    <p class="product__price">Từ 17.990.000</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="product__item">
                             <div class="row">
                                 <img src="https://salt.tikicdn.com/cache/280x280/ts/product/4d/ef/e4/14b4abb6894d99b5953ec1a1b3cd4eb8.jpg"
@@ -260,7 +359,21 @@
     </section>
 
 
-
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
     <!-- Script -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
