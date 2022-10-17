@@ -1,23 +1,52 @@
 <style>
-    .cards {
-        display: flex;
+    .banner {
+        width: 300px;
+        height: 900px;
+        border: 1px solid black;
+        column-count: 2;
     }
 
-    .card + .card {
-        margin-left: 16px;
+    .left-collumn {
+        float: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .picture {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+    }
+
+    .right-picture {}
+
+    .right-collumn {
+        clear: both;
+        width: 400px;
+        height: 300px;
+        box-sizing: 1px solid black;
+        margin-left: 90px;
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
     }
 </style>
-<div class="cards">
-    <div class="card">
-        <p>asdasd</p>
+<div class="row">
+    <div class="column" style="background-color:#aaa;">
+        <h2>Column 1</h2>
+        <p>Some text..</p>
     </div>
-    <div class="card">
-        <p>asdasd</p>
-    </div>
-    <div class="card">
-        <p>asdasd</p>
-    </div>
-    <div class="card">
-        <p>asdasd</p>
+    <div class="column" style="background-color:#bbb;">
+        <h2>Column 2</h2>
+        <p>Some text..</p>
     </div>
 </div>
